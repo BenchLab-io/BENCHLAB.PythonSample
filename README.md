@@ -28,7 +28,7 @@ The script/element available on this page is made to exclusively work with the B
 
 For a user-friendly software, please check : https://github.com/BenchLab-io/BENCHLAB 
 
-# How to use this script with your BEHCHLAB hardware 
+# How to use this script with your BENCHLAB hardware 
 - TO BE UPDATED
 
 
