@@ -29,8 +29,7 @@ The script/element available on this page is made to exclusively work with the B
 For a user-friendly software, please check : https://github.com/BenchLab-io/BENCHLAB 
 
 # How to use this script with your BENCHLAB hardware 
-- TO BE UPDATED
-
+Read the detailed blog post at : https://benchlab.io/blogs/technical/using-the-benchlab-python-example-code
 
 # FAQ
 - How to report a bug?
