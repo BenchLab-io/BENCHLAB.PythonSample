@@ -9,7 +9,7 @@ from enum import IntEnum
 # Constants
 BENCHLAB_VENDOR_ID = 0xEE
 BENCHLAB_PRODUCT_ID = 0x10
-BENCHLAB_FIRMWARE_VERSION = 0x01 # Launch firmware
+BENCHLAB_FIRMWARE_VERSION = 0x02 # Latest known supported version by this script
 SENSOR_VIN_NUM = 13
 SENSOR_POWER_NUM = 11
 FAN_NUM = 9
@@ -139,8 +139,8 @@ vendor_data = VendorDataStruct.from_buffer_copy(buffer)
 print(f"Result: {vendor_data}\n")
 assert vendor_data.VendorId == BENCHLAB_VENDOR_ID and vendor_data.ProductId == BENCHLAB_PRODUCT_ID
 
-if(vendor_data.FwVersion != BENCHLAB_FIRMWARE_VERSION):
-    print(f"Warning: Firmware version {hex(vendor_data.FwVersion)} may not be compatible with this script (for version {hex(BENCHLAB_FIRMWARE_VERSION)}).\n")
+if(vendor_data.FwVersion > BENCHLAB_FIRMWARE_VERSION):
+    print(f"Warning: Firmware version {hex(vendor_data.FwVersion)} is untested with this script. It may not be compatible with this script (latest tested version is {hex(BENCHLAB_FIRMWARE_VERSION)}).\n")
     # Wait for user input
     input("Press Enter to continue...")
 

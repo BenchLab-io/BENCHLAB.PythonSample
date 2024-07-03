@@ -31,6 +31,24 @@ For a user-friendly software, please check : https://github.com/BenchLab-io/BENC
 # How to use this script with your BENCHLAB hardware 
 Read the detailed blog post at : https://benchlab.io/blogs/technical/using-the-benchlab-python-example-code
 
+
+## Run on MacOS (with Python from HomeBrew)
+Once in the Benchlab folder of the script
+
+If python was installed from Homebrew, a virtual environment is required
+```
+python3 -m venv venv
+source venv/bin/activate
+python3 -m pip install pyserial
+```
+
+Then run the python script
+
+```
+python3 benchlab.py
+```
+
+
 # FAQ
 - How to report a bug?
 > Use the Issue tab on this repo and provide as many information incl. computer OS + version / USB Port used on your computer / BENCHLAB and the command line you are trying to use.
