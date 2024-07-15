@@ -31,12 +31,21 @@ For a user-friendly software, please check : https://github.com/BenchLab-io/BENC
 # How to use this script with your BENCHLAB hardware 
 Read the detailed blog post at : https://benchlab.io/blogs/technical/using-the-benchlab-python-example-code
 
+## Requirements
+- Python3
+- SerialPort Module
+
+Some systems might have extra requirements.
+
+## Compatibility
+While Python should allow for cross-platform and users had success running this script on Windows 10/11, Linux (Ubuntu 24.02 LTS) & Mac OS (Sonoma 14.5), there is no guarantee this will work.
+
 # FAQ
 - How to report a bug?
 > Use the Issue tab on this repo and provide as many information incl. computer OS + version / USB Port used on your computer / BENCHLAB and the command line you are trying to use.
 
 # Changelog
-All changelog will be available on the release page.
+All changelog are available on the release page.
 
 # Disclaimer
 The Benchlab Team's goals are to provide a reliable and good user experience, keep in mind that bugs & limitations can still be present.
@@ -44,4 +53,4 @@ If you encounter a bug in the software, you can report it in the "issue" tab on 
 
 To download the latest version, check the Releases tab.
 
-## Benchlab is brought to you by The OpenBenchtable Project & ElmorLabs
+## Benchlab is brought to you by [The OpenBenchtable Project](https://openbenchtable.com/) & [ElmorLabs](https://elmorlabs.com/)
