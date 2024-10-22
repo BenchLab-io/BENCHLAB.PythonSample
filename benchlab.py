@@ -25,7 +25,6 @@ class VendorDataStruct(Structure):
     def __str__(self):
         return f'VendorId: {hex(self.VendorId)}, ProductId: {hex(self.ProductId)}, FwVersion: {hex(self.FwVersion)}'
 
-
 class PowerSensor(Structure):
     _fields_ = [
         ('Voltage', c_int16),
@@ -143,6 +142,13 @@ if(vendor_data.FwVersion != BENCHLAB_FIRMWARE_VERSION):
     print(f"Warning: Firmware version {hex(vendor_data.FwVersion)} may not be compatible with this script (for version {hex(BENCHLAB_FIRMWARE_VERSION)}).\n")
     # Wait for user input
     input("Press Enter to continue...")
+
+# Read UID
+print("Reading UID...")
+ser.write(BENCHLAB_CMD.UART_CMD_READ_UID.toByte())
+buffer = ser.read(12)
+assert len(buffer) == 12
+print(f"UID: {buffer.hex()}\n")
 
 print("Reading sensor values...")
 ser.write(BENCHLAB_CMD.UART_CMD_READ_SENSORS.toByte())
